@@ -1,0 +1,61 @@
+@CHARSET "ISO-8859-1";
+
+{
+padding:0;
+margin:0;
+box-sizing:border-box;
+font-family:'Poppins' ,sans-serif;
+}
+body
+{
+background:#454450;
+width:100%;
+height:100vh;
+display:grid;
+place-items:center;
+color:white;
+}
+.form
+{
+position:relative;
+}
+.textbox
+{
+border:2px solid white;
+border-radius:5px;
+outline:none;
+background:none;
+padding:10px;
+
+margin-bottom:20px;
+}
+.form-label #1
+{
+position:absolute;
+top:0.6rem;
+left:1.4rem;
+cursor:cursor;
+transition :top 200ms ease-in,left 200ms ease-in,font-size 200ms ease-in;
+margin-right:2px
+}
+.form-label #2
+{
+	position:absolute;
+	top:-1.6rem;
+	left:3.5rem;
+	cursor:text;
+	transition :top 200ms ease-in,left 200ms ease-in,font-size 200ms ease-in;
+	
+}
+.textbox:focus
+{
+border:2px solid blue;
+}
+.textbox:focus ~.form-label #1,
+.textbox:not(:placeholder-shown).textbox:not(:focus)~.form-label #1
+{
+top:-0.3rem;
+left:0.5rem;
+font-size:10px;
+background:#262636;
+}
